@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-  --header-height: 10vh;
-  --footer-height: 10vh;
+  --header-height: 4rem;
+  --footer-height: 3rem;
 }
 
 @font-face {
@@ -28,7 +28,7 @@ body {
   background-attachment: fixed;
   min-height: 100vh;
   background-color: #100f0f;
-  position: relative; /* Ensures the content is positioned correctly */
+  position: relative;
   margin:0;
   padding:0;
   top:0;
