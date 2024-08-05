@@ -30,14 +30,36 @@
   color: #ffffff;
 }
 
+.contact{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  width: 100%
+}
+
 .contact-me {
   margin-top: 2em;
   background: #ff8001;
   color: #191919;
   font-weight: 800;
-  font-size: 1.8vw;
+  font-size: 1.4vw;
+  min-font-size: 3em;
   padding: 0.5em 1.2em;
   border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.contact-me:hover {
+  background: #ff8001;
+  color: #191919;
+  font-weight: 800;
+  font-size: 1.5vw;
+  min-font-size: 2.5em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+  box-shadow: 0 0 0 0.2em #ff8001;
 }
 
 @media (max-width: 600px) {

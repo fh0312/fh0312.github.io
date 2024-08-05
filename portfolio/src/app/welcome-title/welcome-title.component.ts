@@ -9,5 +9,8 @@ import { Component } from '@angular/core';
 })
 export class WelcomeTitleComponent {
 
+  navigateTo(url: string) {
+    window.location.href = url;
+  }
 
 }
