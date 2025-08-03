@@ -4,7 +4,8 @@ import {Component} from '@angular/core';
   selector: 'app-profile-picture',
   imports: [],
   templateUrl: './profile-picture.component.html',
-  styleUrl: './profile-picture.component.css'
+  standalone: true,
+  styleUrl: './profile-picture.component.scss'
 })
 export class ProfilePictureComponent {
 

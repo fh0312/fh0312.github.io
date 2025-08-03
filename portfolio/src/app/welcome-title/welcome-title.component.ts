@@ -4,7 +4,8 @@ import {Component} from '@angular/core';
   selector: 'app-welcome-title',
   imports: [],
   templateUrl: './welcome-title.component.html',
-  styleUrl: './welcome-title.component.css'
+  standalone: true,
+  styleUrl: './welcome-title.component.scss'
 })
 export class WelcomeTitleComponent {
 

@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "watch": "ng build --watch --cong add ng-zorro-antdnfiguration development",
     "test": "ng test",
     "deploy": "ng deploy --base-href=."
   },
@@ -19,6 +19,8 @@
     "@angular/platform-browser": "^19.2.14",
     "@angular/platform-browser-dynamic": "^19.2.14",
     "@angular/router": "^19.2.14",
+    "@omnedia/ngx-typewriter": "^2.1.2",
+    "ng-zorro-antd": "^19.3.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.1"

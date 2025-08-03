@@ -1,15 +1,14 @@
 import {Component} from '@angular/core';
-import {ProfilePictureComponent} from "./profile-picture/profile-picture.component";
 import {HeaderComponent} from "./header/header.component";
 import {FooterComponent} from "./footer/footer.component";
-import {WelcomeTitleComponent} from "./welcome-title/welcome-title.component";
+import {MySelfComponent} from "./myself/myself.component";
 
 @Component({
   selector: 'app-root',
-  imports: [ProfilePictureComponent, HeaderComponent, FooterComponent, WelcomeTitleComponent],
+  standalone: true,
+  imports: [HeaderComponent, FooterComponent, MySelfComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'portfolio';
 }

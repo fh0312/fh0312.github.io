@@ -2,11 +2,14 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-header',
+  standalone: true,
   imports: [],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  constructor() {
+  }
 
   scrollToEvent($event: MouseEvent) {
     const button = $event.target as HTMLElement;
@@ -17,6 +20,6 @@ export class HeaderComponent {
     const element = document.getElementById(id) as HTMLElement;
     console.log("element", element);
     element.scrollIntoView({ behavior: 'smooth' });
-
   }
+
 }
