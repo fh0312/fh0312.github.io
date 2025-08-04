@@ -1,27 +1,65 @@
-# Portfolio
+# Portfolio Website
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+This project is my personal portfolio, built with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8. It showcases my skills, projects, and experience in a clean and responsive design.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Development Server
 
-## Code scaffolding
+To run the project locally, use:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+ng serve
+
+Then open your browser at http://localhost:4200/. The app supports live reload, so it will automatically update as you make changes.
+
+---
+
+## Code Scaffolding
+
+To generate new Angular building blocks, use:
+
+ng generate component component-name
+
+You can also generate directives, pipes, services, classes, guards, interfaces, enums, and modules:
+
+ng generate directive|pipe|service|class|guard|interface|enum|module
+
+---
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Build the project for production with:
 
-## Running unit tests
+ng build
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The compiled files will be saved in the dist/ folder, ready to be deployed.
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Testing
 
-## Further help
+- **Unit Tests:** Run
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  ng test
+
+  to execute unit tests using [Karma](https://karma-runner.github.io).
+
+- **End-to-End Tests:** Run
+
+  ng e2e
+
+  to run end-to-end tests using your chosen testing platform. Make sure to add an e2e testing package before running this command.
+
+---
+
+## Additional Help
+
+For more information on Angular CLI commands and features, run:
+
+ng help
+
+or visit the official [Angular CLI Documentation](https://angular.io/cli).
+
+---
+
+Thank you for checking out my portfolio project!
