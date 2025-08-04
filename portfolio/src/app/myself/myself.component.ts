@@ -33,7 +33,7 @@ export class MySelfComponent {
     }
 
     typewriterTitles = [
-        'Full Stack Developer',
-        'Java | Angular | Spring Boot | APIs'
+        'A Passionate Full Stack Developer',
+        'Java | Angular | Spring Boot | DevOps'
     ];
 }

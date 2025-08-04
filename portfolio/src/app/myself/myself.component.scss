@@ -31,12 +31,16 @@
 }
 
 .intro-text {
+  max-width: 600px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: $spacing-md;
   margin-right: 1rem;
 
   h1 {
+    width: max-content;
     text-align: center;
     font-size: $font-size-xxl;
     font-weight: 700;
@@ -83,14 +87,11 @@
 }
 
 .subtitle {
+  text-align: center;
   font-size: $font-size-large;
   font-weight: 400;
   color: $text-subtle;
   margin-bottom: $spacing-md;
-
-  p {
-    margin: 0;
-  }
 }
 
 .contact-btn {
