@@ -1,69 +1,50 @@
-:root {
-  --background-menu-color: transparent;
-}
+@use 'styles/variables' as vars;
+@use "sass:color";
 
-[menu-opened="true"] {
-  --background-menu-color: rgb(48, 48, 48);
-}
-
-.container {
-  margin-top: 2rem;
+.app-header {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: 100%;
-  width: 100%;
-  padding: 1.5rem;
-  background-color: var(--background-menu-color);
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  padding: 1.5rem 10rem;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
 }
 
-.nav {
-  margin-top: 10%;
-  width: 100%;
+.logo {
   display: flex;
-  flex-direction: column;
-  height: 100vh;
-  gap: 20%;
-  background: transparent;
-  border-radius: 16pt;
+  align-items: center;
 
-  button {
-    cursor: pointer;
-    margin-bottom: 1rem;
-    padding: 10% 15% 10% 15%;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    background-color: #fff;
+  img {
+    height: 70px;
+  }
+}
 
-    border-radius: 18pt;
-    border-style: none;
-    box-shadow: rgba(0, 0, 0, .2) 0 6px 10px -2px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
-    color: #3c4043;
+.nav-links {
+  display: flex;
+  gap: 3rem;
 
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: .25px;
-    line-height: normal;
-    overflow: visible;
+  a {
+    color: vars.$light-text-color;
+
+    font-size: 1.8rem;
+    text-decoration: none;
+    font-weight: 500;
     position: relative;
-    text-align: center;
-    text-transform: none;
-    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1), opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-  }
+    transition: color 0.3s;
 
-  button:hover {
-    background: #F6F9FE;
-    color: #ff8001;
-  }
+    &:hover {
+      color: vars.$primary-color;
+    }
 
-  button:focus {
-    outline: none;
-    color: #ff8001;
-    border: 4px solid #ff8001;
+    &.active::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+    }
   }
 }
-

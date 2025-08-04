@@ -1,4 +1,4 @@
-@use 'styles/variables' as *;
+@use 'styles/variables' as vars;
 
 .myself-container {
   min-height: 100vh;
@@ -8,17 +8,17 @@
 }
 
 .myself-content {
-  min-width: 60vw;
+  min-width: 80vw;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  gap: $spacing-xl;
-  padding: $spacing-lg;
+  gap: vars.$spacing-xl;
+  padding: vars.$spacing-lg;
 }
 
 .hexagon-frame {
-  width: 250px;
-  height: 250px;
+  width: 400px;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,26 +31,25 @@
 }
 
 .intro-text {
-  max-width: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: $spacing-md;
+  gap: vars.$spacing-md;
   margin-right: 1rem;
 
   h1 {
     width: max-content;
     text-align: center;
-    font-size: $font-size-xxl;
+    font-size: vars.$font-size-xxl;
     font-weight: 700;
-    color: $text-color;
+    color: vars.$text-color;
     margin: 0;
   }
 }
 
 .highlight {
-  color: $primary-color;
+  color: vars.$primary-color;
 }
 
 .wave {
@@ -77,10 +76,10 @@
 }
 
 .typewriter {
-  font-size: $font-size-xl;
+  font-size: vars.$font-size-xl;
   font-weight: 700;
   letter-spacing: 1px;
-  color: $text-color;
+  color: vars.$text-color;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,39 +87,39 @@
 
 .subtitle {
   text-align: center;
-  font-size: $font-size-large;
+  font-size: vars.$font-size-large;
   font-weight: 400;
-  color: $text-subtle;
-  margin-bottom: $spacing-md;
+  color: vars.$text-subtle;
+  margin-bottom: vars.$spacing-md;
 }
 
 .contact-btn {
-  margin-top: $spacing-sm;
-  font-size: $font-size-medium;
+  margin-top: vars.$spacing-sm;
+  font-size: vars.$font-size-medium;
   border-radius: 24px;
   line-height: 2rem;
   padding: 0.6rem 2.2rem;
-  background: linear-gradient(90deg, $primary-color 0%, $primary-light 100%);
+  background: linear-gradient(90deg, vars.$primary-color 0%, vars.$primary-light 100%);
   border: none;
-  box-shadow: 0 4px 16px rgba($primary-color, 0.2);
+  box-shadow: 0 4px 16px rgba(vars.$primary-color, 0.2);
   color: white;
   cursor: pointer;
 }
 
 .social-icons {
-  margin-top: $spacing-md;
+  margin-top: vars.$spacing-md;
   display: flex;
-  gap: $spacing-md;
+  gap: vars.$spacing-md;
   justify-content: center;
   align-items: center;
 
   a {
     font-size: 2rem;
-    color: $text-color;
+    color: vars.$text-color;
     transition: color 0.2s;
 
     &:hover {
-      color: $primary-color;
+      color: vars.$primary-color;
     }
   }
 }
@@ -128,7 +127,7 @@
 @media (max-width: 768px) {
   .myself-content {
     flex-direction: column;
-    gap: $spacing-lg;
+    gap: vars.$spacing-lg;
     text-align: center;
   }
 }
