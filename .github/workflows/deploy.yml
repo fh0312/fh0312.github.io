@@ -34,12 +34,12 @@ jobs:
 
       - name: Build Angular app
         working-directory: portfolio
-        run: npm run build -- --configuration production --base-href /fh0312/
+        run: npm run build
 
       - name: Upload artifact for deployment
         uses: actions/upload-pages-artifact@v3
         with:
-          path: portfolio/dist/portfolio
+          path: portfolio/dist/portfolio/browser
 
   deploy:
     environment:
