@@ -17,16 +17,20 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
+          cache-dependency-path: portfolio/package-lock.json
 
       - name: Install dependencies
+        working-directory: portfolio
         run: npm ci
 
       - name: Build Angular app
+        working-directory: portfolio
         run: npm run build -- --base-href /fh0312/
 
       - name: Deploy to GitHub Pages branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: github-pages
-          folder: dist/fh0312
+          folder: portfolio/dist/portfolio
           clean: true
