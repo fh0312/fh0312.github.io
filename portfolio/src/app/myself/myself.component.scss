@@ -1,0 +1,104 @@
+@use 'styles/variables' as vars;
+
+.container {
+  padding: 4rem 8rem;
+  align-self: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+
+}
+
+.content {
+  display: flex;
+  gap: vars.$spacing-xl;
+  padding-top: 5%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.intro-text {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: vars.$spacing-md;
+  margin-right: 1rem;
+
+  h1 {
+    width: max-content;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: vars.$text-color;
+    margin: 0;
+  }
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: vars.$spacing-sm;
+}
+
+.highlight {
+  color: vars.$primary-dark;
+}
+
+.typewriter {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: vars.$text-color;
+  display: flex;
+  align-items: start;
+  justify-content: space-evenly;
+}
+
+.subtitle {
+  font-size: vars.$font-size-large;
+  font-weight: 400;
+  color: vars.$text-subtle;
+  margin-bottom: vars.$spacing-md;
+}
+
+.contact-btn {
+  margin-top: vars.$spacing-sm;
+  font-size: vars.$font-size-medium;
+  border-radius: 24px;
+  line-height: 2rem;
+  padding: 0.6rem 2.2rem;
+  background: linear-gradient(90deg, vars.$primary-color 0%, vars.$primary-light 100%);
+  border: none;
+  box-shadow: 0 4px 16px rgba(vars.$primary-color, 0.2);
+  color: white;
+  cursor: pointer;
+}
+
+.social-icons {
+  margin-top: vars.$spacing-md;
+  display: flex;
+  gap: vars.$spacing-md;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    font-size: 2rem;
+    color: vars.$text-color;
+    transition: color 0.2s;
+
+    &:hover {
+      color: vars.$primary-color;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .myself-content {
+    flex-direction: column;
+    gap: vars.$spacing-lg;
+  }
+}

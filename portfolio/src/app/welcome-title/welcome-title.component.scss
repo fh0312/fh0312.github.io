@@ -1,0 +1,92 @@
+/* General styles for the welcome title */
+
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  text-align: left;
+  color: #ffffff;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.hi {
+  margin: 0 0 0 0;
+}
+
+.name {
+  margin-top: 0.5em;
+  max-font-size: 10pt;
+}
+
+.francisco{
+  color: #ff8001;
+}
+
+.role {
+  margin:0;
+  color: #ffffff;
+}
+
+.contact{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  width: 100%
+}
+
+.contact-me {
+  margin-top: 2em;
+  background: #ff8001;
+  color: #191919;
+  font-weight: 800;
+  font-size: 1.4vw;
+  min-font-size: 3em;
+  padding: 0.5em 1.2em;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.contact-me:hover {
+  background: #ff8001;
+  color: #191919;
+  font-weight: 800;
+  font-size: 1.5vw;
+  min-font-size: 2.5em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+  box-shadow: 0 0 0 0.2em #ff8001;
+}
+
+@media (max-width: 600px) {
+  .hi {
+    margin-top: 1em;
+    font-size: 7vw;
+  }
+  .name {
+    margin-top: 0;
+    font-size: 5vw;
+  }
+  .role {
+    font-size: 4vw;
+  }
+}
+
+@media (min-width: 600px) {
+  .hi {
+    font-size: 3vw;
+  }
+
+  .name {
+    font-size: 3vw;
+  }
+
+  .role {
+    font-size: 3vw;
+  }
+}
+
