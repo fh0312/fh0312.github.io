@@ -17,17 +17,12 @@
 }
 
 html {
+  background-color: #111;
   scroll-behavior: smooth;
 }
 
 body {
-  background-image: url('assets/wallpaper.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
   min-height: 100vh;
-  background-color: #100f0f;
   position: relative;
   margin: 0;
   padding: 0;

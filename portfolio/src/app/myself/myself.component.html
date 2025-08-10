@@ -1,44 +1,34 @@
-<div class="myself-container">
-    <div class="myself-content">
-
-        <!-- Profile Image (Hexagon Frame) -->
-        <div class="hexagon-frame" [@floatAnimation]>
-            <img
-                    src="assets/profile-picture.png"
-                    alt="Portrait of Francisco"
-                    class="profile-img"
-            />
-        </div>
-
-        <!-- Intro Text Section -->
+<div class="container">
+    <div class="content">
         <div class="intro-text">
             <h1>
-                Hey, I'm <span class="highlight">Francisco Henriques</span>
+                Hey, I'm <span class="title">Francisco Henriques</span>
             </h1>
 
             <h2 class="typewriter">
-                <om-typewriter
-                        [words]="typewriterTitles"
-                ></om-typewriter>
+                <span>A Passionate </span>
+                <om-typewriter class="highlight" [words]="typewriterTitles"></om-typewriter>
             </h2>
 
-            <div class="subtitle">
+            <p class="subtitle">
                 “Driven by crafting engaging frontends, tackling backend complexities and mastering CI/CD pipelines.”
-            </div>
+            </p>
 
+            <!-- Social Links -->
             <div class="social-icons">
-                <div class="social-icons">
-                    <a href="https://linkedin.com/in/franciscojosehenriques" target="_blank" rel="noopener noreferrer">
-                        <nz-icon nzType="linkedin" nzTheme="fill"></nz-icon>
-                    </a>
-                    <a href="https://github.com/fh0312" target="_blank" rel="noopener noreferrer">
-                        <nz-icon nzType="github" nzTheme="outline"></nz-icon>
-                    </a>
-                    <a href="assets/docs/cv/fhenriques.pdf" target="_blank" rel="noopener noreferrer">
-                        <nz-icon nzType="profile" nzTheme="outline"></nz-icon>
-                    </a>
-                </div>
+                <a href="https://linkedin.com/in/franciscojosehenriques" target="_blank" rel="noopener noreferrer">
+                    <nz-icon nzType="linkedin" nzTheme="fill"></nz-icon>
+                </a>
+                <a href="https://github.com/fh0312" target="_blank" rel="noopener noreferrer">
+                    <nz-icon nzType="github" nzTheme="outline"></nz-icon>
+                </a>
+                <a href="assets/docs/cv/fhenriques.pdf" target="_blank" rel="noopener noreferrer">
+                    <nz-icon nzType="profile" nzTheme="outline"></nz-icon>
+                </a>
             </div>
         </div>
+        <app-profile-picture></app-profile-picture>
     </div>
+    <app-achievements-card></app-achievements-card>
 </div>
+

@@ -3,13 +3,20 @@ $primary-color: #3B82F6;
 $primary-dark: #2563EB;
 $primary-light: #60A5FA;
 
-$text-color: #161B22;
-$text-subtle: #25282c;
-$text-muted: #6B7280;
+$text-color: #EBEBDF;
+$text-subtle: #D1D5DB;
+$text-muted: #9CA3AF;
 
-$light-text-color: #f6f5f3;
+$text-accent: #A5D8FF;
+$text-highlight: #FACC15;
 
-$background-color: #f6f5f3;
+$dark-text-color: #111111;
+$dark-text-subtle: #1F2937;
+$dark-text-muted: #4B5563;
+
+$background-color: rgba(18, 18, 18, 100);
+;
+$background-header-color: rgba(18, 18, 18, 100);
 $card-background: #161B22;
 $hover-background: #1F2937;
 
@@ -22,11 +29,11 @@ $box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 
 // ==== Typography ====
 $font-family: 'Inter', sans-serif;
-$font-size-small: 18px;
-$font-size-medium: 24px;
-$font-size-large: 32px;
-$font-size-xl: 42px;
-$font-size-xxl: 50px;
+$font-size-small: 16px;
+$font-size-medium: 22px;
+$font-size-large: 24px;
+$font-size-xl: 28px;
+$font-size-xxl: 46px;
 
 $heading-color: $text-color;
 $subheading-color: $text-subtle;
@@ -42,3 +49,7 @@ $spacing-sm: 8px;
 $spacing-md: 16px;
 $spacing-lg: 24px;
 $spacing-xl: 32px;
+
+// ==== Header and Footer ====
+$header-height: 1rem;
+$header-logo-size: 4rem;

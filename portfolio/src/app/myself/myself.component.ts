@@ -1,8 +1,9 @@
 import {Component} from '@angular/core';
-import {animate, keyframes, style, transition, trigger} from '@angular/animations';
 import {NzIconDirective, NzIconModule, NzIconService} from "ng-zorro-antd/icon";
 import {NgxTypewriterComponent} from "@omnedia/ngx-typewriter";
 import {GithubOutline, LinkedinFill, ProfileOutline} from "@ant-design/icons-angular/icons";
+import {ProfilePictureComponent} from "../profile-picture/profile-picture.component";
+import {AchievementsCardComponent} from "../achievments-card/achievements-card.component";
 
 
 @Component({
@@ -14,17 +15,8 @@ import {GithubOutline, LinkedinFill, ProfileOutline} from "@ant-design/icons-ang
         NzIconDirective,
         NgxTypewriterComponent,
         NzIconModule,
-    ],
-    animations: [
-        trigger('floatAnimation', [
-            transition(':enter', [
-                animate('3s infinite ease-in-out', keyframes([
-                    style({transform: 'translateY(0px)', offset: 0}),
-                    style({transform: 'translateY(-20px)', offset: 0.5}),
-                    style({transform: 'translateY(0px)', offset: 1}),
-                ]))
-            ])
-        ])
+        ProfilePictureComponent,
+        AchievementsCardComponent,
     ]
 })
 export class MySelfComponent {
@@ -33,7 +25,8 @@ export class MySelfComponent {
     }
 
     typewriterTitles = [
-        'A Passionate Full Stack Developer',
-        'Java | Angular | Spring Boot | DevOps'
+        ' Full Stack Developer',
+        ' DevOps Practitioner',
+        ' Cloud Enthusiast',
     ];
 }
