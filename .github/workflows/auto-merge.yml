@@ -19,9 +19,9 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Sync dev to main"
+          commit-message: "Auto PR: sync dev to main"
           title: "Auto PR: dev → main"
-          body: "Automated PR from dev branch to main branch"
+          body: "Auto-generated PR to sync dev into main"
           base: main
 
       - name: Merge Pull Request
@@ -31,9 +31,13 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const prNumber = parseInt("${{ steps.cpr.outputs.pull-request-number }}");
-            await github.pulls.merge({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: prNumber,
-              merge_method: "merge"
-            });
+            if (prNumber) {
+              await github.pulls.merge({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: prNumber,
+                merge_method: "merge"
+              });
+            } else {
+              console.log("No PR created.");
+            }
