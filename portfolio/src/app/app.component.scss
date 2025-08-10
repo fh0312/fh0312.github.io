@@ -3,6 +3,14 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 120px;
+
+
+  padding-top: env(safe-area-inset-top);
+}
+
+body, .app-container {
+  margin: 0;
+  padding: 0;
 }
 
 .app-container {
@@ -13,8 +21,18 @@ html {
   width: 100vw;
   overflow: auto;
   background-color: $background-color;
+
   grid-template-rows: 1fr 4fr 1fr;
   grid-template-columns: 100%;
+
+
+  @media (max-width: 480px) {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 100%;
+  }
+
+
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 .content {
@@ -23,12 +41,22 @@ html {
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  padding: 3rem 0;
+  padding: 3rem 1rem;
 
+  @media (max-width: 480px) {
+    padding: 2rem 1rem;
+  }
 }
 
 section {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   width: 100%;
   padding: 2rem;
+
+
+  @media (max-width: 480px) {
+    padding: 1rem;
+  }
 }
