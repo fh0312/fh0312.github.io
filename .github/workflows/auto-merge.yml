@@ -1,4 +1,4 @@
-name: Create a PR from dev to main and auto-merge
+name: Create and auto-merge PR from dev to main
 
 on:
   push:
@@ -6,38 +6,37 @@ on:
       - dev
 
 jobs:
-  create-and-merge-pr:
+  create-pr-and-merge:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout dev branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: dev
 
-      - name: Create or update Pull Request
-        id: cpr
-        uses: peter-evans/create-pull-request@v5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Auto PR: sync dev to main"
-          title: "Auto PR: dev → main"
-          body: "Auto-generated PR to sync dev into main"
-          base: main
+      - name: Install GitHub CLI
+        run: |
+          sudo apt-add-repository https://cli.github.com/packages
+          sudo apt update
+          sudo apt install gh -y
+          gh --version
 
-      - name: Merge Pull Request
-        if: steps.cpr.outputs.pull-request-number != ''
-        uses: actions/github-script@v6
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const prNumber = parseInt("${{ steps.cpr.outputs.pull-request-number }}");
-            if (prNumber) {
-              await github.pulls.merge({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                pull_number: prNumber,
-                merge_method: "merge"
-              });
-            } else {
-              console.log("No PR created.");
-            }
+      - name: Authenticate GitHub CLI
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo $GITHUB_TOKEN | gh auth login --with-token
+
+      - name: Create PR from dev to main
+        run: |
+          gh pr create --base main --head dev --title "Sync dev to main" --body "Auto-generated PR from dev to main" --fill
+
+      - name: Merge PR
+        run: |
+          PR_NUMBER=$(gh pr list --head dev --base main --json number --jq '.[0].number')
+          if [ -n "$PR_NUMBER" ]; then
+            gh pr merge $PR_NUMBER --squash --auto --delete-branch
+          else
+            echo "No PR found to merge"
+          fi
