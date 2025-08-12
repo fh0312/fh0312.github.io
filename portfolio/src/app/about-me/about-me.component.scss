@@ -15,11 +15,12 @@
   @media (max-width: 900px) {
     flex-direction: column;
     align-items: center;
+    gap: 3rem;
+    text-align: center;
   }
 }
 
 .about-me-left {
-
   .about-me-header {
     margin-bottom: 2rem;
     text-justify-trim: inter-word;
@@ -37,16 +38,9 @@
       color: $text-color;
     }
   }
-
-  @media (max-width: 900px) {
-
-  }
 }
 
 .about-me-right {
-  @media (max-width: 900px) {
-
-  }
 }
 
 .carousel-staggered-grid {
@@ -104,6 +98,58 @@
       max-width: 210px;
       height: 80px;
       margin-bottom: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .about-me-flex {
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .about-me-left .about-me-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .about-me-left .about-me-header p {
+    font-size: 0.9rem;
+    text-justify: auto;
+  }
+
+  .carousel-staggered-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .carousel-row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex: 1 1 auto;
+  }
+
+  .carousel-group {
+    width: auto;
+    height: 100px;
+    text-align: center;
+
+    h3 {
+      font-size: 0.6rem;
+    }
+  }
+
+  .logo-carousel {
+    width: auto;
+    max-width: 80px;
+    height: 80px;
+
+    .carousel-item .logo-img {
+      width: auto;
+      max-width: 80px;
+      height: 50px;
     }
   }
 }
