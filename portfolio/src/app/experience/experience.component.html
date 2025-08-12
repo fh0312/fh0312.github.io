@@ -1,0 +1,27 @@
+<div class="experience">
+  <div class="experience-header">
+    <h1>
+      My professional journey
+    </h1>
+  </div>
+
+  <div class="experience-section">
+    <div class="timeline"></div>
+    <div class="experience-list">
+      <div class="experience-card" *ngFor="let exp of experiences; let i = index">
+        <div class="timeline-dot"></div>
+        <div class="experience-content">
+          <div class="experience-header">
+            <h3>{{ exp.role }}</h3>
+            <h4>{{ exp.company }}</h4>
+            <span class="dates">{{ exp.start }} – {{ exp.end }}</span>
+          </div>
+          <ul>
+            <li *ngFor="let desc of exp.description">{{ desc }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
