@@ -21,7 +21,7 @@
 }
 
 .timeline {
-  margin: 2rem 0;
+  margin: 3rem 0;
   position: absolute;
   left: 3rem;
   top: 0;
@@ -112,15 +112,23 @@
   }
 }
 
-/* Mobile & Tablet Responsiveness */
-@media (max-width: 1024px) {
+@media (max-width: 600px) {
   .experience {
-    width: 90vw;
+    width: 95vw;
+    margin: 0 auto;
+  }
+
+  .experience-header {
+    h1 {
+      margin: 0.5rem 0;
+      font-size: 1.3rem;
+      text-align: center;
+    }
   }
 
   .experience-section {
     flex-direction: column;
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
   }
 
   .timeline {
@@ -130,39 +138,44 @@
   .experience-list {
     margin-left: 0;
     gap: 2rem;
+    width: 100%;
   }
 
   .experience-card {
     flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    position: relative;
 
     .timeline-dot {
       display: none;
     }
-  }
-}
 
-@media (max-width: 600px) {
-  .experience-header h1 {
-    font-size: 2rem;
-  }
+    .experience-content {
+      padding: 1.2rem 1rem;
+      border-radius: 12px;
 
-  .experience-content {
-    padding: 1.5rem;
+      h3 {
+        font-size: 1.1rem;
+      }
 
-    h3 {
-      font-size: 1.4rem;
-    }
+      h4 {
+        font-size: 0.9rem;
+      }
 
-    h4 {
-      font-size: 1rem;
-    }
+      .dates {
+        font-size: 0.8rem;
+      }
 
-    .dates {
-      font-size: 0.9rem;
-    }
+      ul {
+        padding-left: 1.2rem;
 
-    ul li {
-      font-size: 0.95rem;
+        li {
+          font-size: 0.75rem;
+          line-height: 1.4;
+          margin-bottom: 0.5rem;
+        }
+      }
     }
   }
 }
