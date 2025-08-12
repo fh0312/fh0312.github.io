@@ -22,7 +22,7 @@ body, .app-container {
   overflow: auto;
   background-color: $background-color;
 
-  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 4fr;
   grid-template-columns: 100%;
 
 
@@ -31,8 +31,6 @@ body, .app-container {
     grid-template-columns: 100%;
   }
 
-
-  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 .content {
@@ -54,6 +52,7 @@ section {
   align-items: center;
   width: 100%;
   padding: 2rem;
+  scroll-margin-top: 96px;
 
 
   @media (max-width: 480px) {
