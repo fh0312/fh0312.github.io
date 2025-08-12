@@ -1,0 +1,168 @@
+@use 'styles/variables' as *;
+
+.experience {
+  width: 80vw;
+}
+
+.experience-header {
+  h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: $primary-dark;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.experience-section {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding: 3rem 2rem;
+}
+
+.timeline {
+  margin: 2rem 0;
+  position: absolute;
+  left: 3rem;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 2px;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+  margin-left: 4rem;
+}
+
+.experience-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  position: relative;
+
+  .timeline-dot {
+    position: absolute;
+    left: -3.7rem;
+    top: 2rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: $primary-color;
+    border: 3px solid currentColor;
+    border-radius: 50%;
+    z-index: 2;
+  }
+
+  .experience-content {
+    flex: 1;
+    padding: 2rem;
+    border-radius: 16px;
+    color: white;
+    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, rgba(255, 87, 87, 0.85), rgba(255, 145, 77, 0.85));
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    h3 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 0.2rem;
+    }
+
+    h4 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .dates {
+      font-size: 1.4rem;
+      font-weight: 200;
+      opacity: 0.85;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+
+      li {
+        font-size: 1.3rem;
+        line-height: 1.6;
+        margin-bottom: 0.6rem;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &:nth-child(2n) .experience-content {
+    background: linear-gradient(135deg, rgba(87, 204, 255, 0.85), rgba(77, 148, 255, 0.85));
+  }
+
+  &:nth-child(3n) .experience-content {
+    background: linear-gradient(135deg, rgba(144, 238, 144, 0.85), rgba(34, 193, 195, 0.85));
+  }
+}
+
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 1024px) {
+  .experience {
+    width: 90vw;
+  }
+
+  .experience-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .timeline {
+    display: none;
+  }
+
+  .experience-list {
+    margin-left: 0;
+    gap: 2rem;
+  }
+
+  .experience-card {
+    flex-direction: column;
+
+    .timeline-dot {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .experience-header h1 {
+    font-size: 2rem;
+  }
+
+  .experience-content {
+    padding: 1.5rem;
+
+    h3 {
+      font-size: 1.4rem;
+    }
+
+    h4 {
+      font-size: 1rem;
+    }
+
+    .dates {
+      font-size: 0.9rem;
+    }
+
+    ul li {
+      font-size: 0.95rem;
+    }
+  }
+}
