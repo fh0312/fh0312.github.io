@@ -9,7 +9,7 @@ import {FormsModule} from '@angular/forms';
 import {provideAnimationsAsync} from '@angular/platform-browser/animations/async';
 import {provideHttpClient} from '@angular/common/http';
 import {provideAntIcons} from '@ant-design/icons-angular';
-import {GithubOutline, LinkedinFill, TwitterOutline} from '@ant-design/icons-angular/icons';
+import {GithubOutline, LinkedinFill, PhoneOutline} from '@ant-design/icons-angular/icons';
 
 registerLocaleData(en);
 
@@ -20,6 +20,6 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom(FormsModule),
     provideAnimationsAsync(),
     provideHttpClient(),
-    provideAntIcons([GithubOutline, TwitterOutline, LinkedinFill]) // ← Add this line
+    provideAntIcons([GithubOutline, PhoneOutline, LinkedinFill])
   ]
 };
