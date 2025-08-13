@@ -38,10 +38,10 @@
     <section class="contact-section">
       <p>If you have any questions, opportunities, or just want to say hi, feel free to send me a message below.</p>
 
-      <form [attr.action]="formspreeUrl" method="POST" class="contact-form">
+      <form class="contact-form" (submit)="onSubmit($event)">
         <label>
           Your email:
-          <input type="email" name="email" placeholder="you@example.com" required>
+          <input type="email" name="email" placeholder="you@example.com" required/>
         </label>
 
         <label>
@@ -51,6 +51,9 @@
 
         <button type="submit">Send</button>
       </form>
+      <div *ngIf="submitted" class="success-message">
+        Thank you for your message!
+      </div>
     </section>
   </section>
 </div>
