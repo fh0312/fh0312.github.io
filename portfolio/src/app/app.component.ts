@@ -4,11 +4,12 @@ import {FooterComponent} from "./footer/footer.component";
 import {MySelfComponent} from "./myself/myself.component";
 import {AboutMeComponent} from "./about-me/about-me.component";
 import {ExperienceComponent} from "./experience/experience.component";
+import {ContactComponent} from "./contact/contact.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, MySelfComponent, AboutMeComponent, ExperienceComponent],
+  imports: [HeaderComponent, FooterComponent, MySelfComponent, AboutMeComponent, ExperienceComponent, ContactComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']  // <-- fix here
 })
